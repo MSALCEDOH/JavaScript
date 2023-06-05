@@ -32,3 +32,9 @@ class Product {
         return `idProduct: ${this._idProduct}, name: ${this._name}, price: ${this._price}`
     }
 }
+
+let product1 = new Product('Pant',200);
+let product2 = new Product('Shirt',100)
+
+console.log(product1.toString());
+console.log(product2.toString());
