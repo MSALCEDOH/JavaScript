@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Example Form with JavaScript</title>
+    <!-- <style>
+        .azul{
+            color: blue;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- <h1 id='headm'>Example</h1>
+    <p class="azul" id='parraf1'>Greetings 1!</p>
+    <p class="azul" id='parraf2'>Greetings 2!</p>
+    <script>
+        //let parrafos = document.getElementsByClassName('azul');
+        let parrafos = document.querySelectorAll('p.azul');
+        console.log('Nro parrafos: ' + parrafos.length)
+        for (let i=0;parrafos.length-1;i++){
+            console.log(parrafos[i].innerHTML)
+        }
+    </script> -->
+    <form id='form1'>
+        Name: <input type="text" name="name" value="Martin"/>
+        <br/>
+        Lastname: <input type="text" name="lastname" value="Salcedo"/>
+        <br/>
+    </form>
+    <button onclick="showValues()">Show</button>
+    <div id="valuesdiv"></div>
+    <script>
+        function showValues(){
+            let forms = document.forms["form1"];
+            let text = '';
+            let name = forms['name'];
+            let lastname = forms['lastname'];
+            text = name.value + '<br/>' + lastname.value;
+            // for (let element of forms){
+            //     text+= element.value + '<br/>';
+            // }
+            document.getElementById("valuesdiv").innerHTML = text;
+
+        }
+    </script>
+</body>
+</html>
